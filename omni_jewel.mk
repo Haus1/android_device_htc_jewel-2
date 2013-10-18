@@ -15,7 +15,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, vendor/omni/config/common.mk)
 
 # Inherit from jewel device
-$(call inherit-product, device/htc/jewel.mk)
+$(call inherit-product, device/htc/jewel/jewel.mk)
 
 PRODUCT_NAME := omni_jewel
 PRODUCT_DEVICE := jewel
