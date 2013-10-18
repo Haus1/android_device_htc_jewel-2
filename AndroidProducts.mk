@@ -15,6 +15,5 @@
 #
 
 PRODUCT_MAKEFILES := \
-#    $(LOCAL_DIR)/jewel.mk \
     $(LOCAL_DIR)/custom_jewel.mk \
-	$(LOCAL_DIR)/omni_jewel.mk
+    $(LOCAL_DIR)/omni_jewel.mk
