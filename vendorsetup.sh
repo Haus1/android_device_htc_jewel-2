@@ -1,2 +1,3 @@
 add_lunch_combo custom_jewel-userdebug
 add_lunch_combo omni_jewel-userdebug
+add_lunch_combo omni_jewel-eng
