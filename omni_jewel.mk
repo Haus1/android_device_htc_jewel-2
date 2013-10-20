@@ -1,6 +1,8 @@
 # Least specific includes go first, so that they can get
 # overridden further down
 
+TARGET_DEVICE=jewel
+
 # include the non-open-source counterpart to this file
 -include vendor/htc/jewel/AndroidBoardVendor.mk
 
@@ -17,7 +19,7 @@ $(call inherit-product, vendor/omni/config/common.mk)
 # Inherit from jewel device
 $(call inherit-product, device/htc/jewel/jewel.mk)
 
-PRODUCT_NAME := jewel
+PRODUCT_NAME := omni_jewel
 PRODUCT_DEVICE := jewel
 PRODUCT_BRAND := htc
 PRODUCT_MODEL := EVO
