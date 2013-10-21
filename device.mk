@@ -13,19 +13,28 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
+$(call inherit-product-if-exists, vendor/htc/jewel/jewel-vendor.mk)
 
-$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
+#Device overlay
+DEVICE_PACKAGE_OVERLAYS += device/htc/jewel/overlay
+
+#Common overlays
+DEVICE_PACKAGE_OVERLAYS += device/htc/s4-common/overlay
+
+TARGET_SCREEN_HEIGHT := 1280
+TARGET_SCREEN_WIDTH := 720
 
 # common S4 configs
 $(call inherit-product, device/htc/s4-common/s4.mk)
-
-DEVICE_PACKAGE_OVERLAYS += device/htc/jewel/overlay
 
 # Boot ramdisk setup
 PRODUCT_PACKAGES += \
     fstab.qcom \
     init.target.rc \
-    remount.qcom
+    init.qcom.radio_links.sh \
+    init.qcom.sdio.sh \
+    remount.qcom \
+    init.rc
 
 # Sound configs
 PRODUCT_COPY_FILES += \
@@ -72,7 +81,9 @@ PRODUCT_COPY_FILES += \
 
 # NFC Support
 PRODUCT_PACKAGES += \
+    nfc.msm8960 \
     libnfc \
+    libnfc_ndef \
     libnfc_jni \
     Nfc \
     Tag \
@@ -80,11 +91,15 @@ PRODUCT_PACKAGES += \
 
 # Torch
 PRODUCT_PACKAGES += \
+    DeviceSettings \
     Torch
 
 # Filesystem management tools
 PRODUCT_PACKAGES += \
     e2fsck
+
+PRODUCT_PACKAGES += \
+    libnetcmdiface
 
 # Permissions
 PRODUCT_COPY_FILES += \
@@ -103,11 +118,11 @@ PRODUCT_AAPT_CONFIG := normal hdpi xhdpi
 PRODUCT_AAPT_PREF_CONFIG := xhdpi
 PRODUCT_LOCALES += en_US
 
-# call the proprietary setup
-$(call inherit-product-if-exists, vendor/htc/jewel/jewel-vendor.mk)
-
 # call dalvik heap config
 $(call inherit-product, frameworks/native/build/phone-xhdpi-1024-dalvik-heap.mk)
+
+# call hwui memory config
+$(call inherit-product-if-exists, frameworks/native/build/phone-xxhdpi-1048-hwui-memory.mk)
 
 # Discard inherited values and use our own instead.
 PRODUCT_DEVICE := jewel
