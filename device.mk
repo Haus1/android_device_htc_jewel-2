@@ -98,8 +98,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     e2fsck
 
-PRODUCT_PACKAGES += \
-    libnetcmdiface
+#PRODUCT_PACKAGES += \
+#    libnetcmdiface
 
 # Permissions
 PRODUCT_COPY_FILES += \
@@ -122,7 +122,7 @@ PRODUCT_LOCALES += en_US
 $(call inherit-product, frameworks/native/build/phone-xhdpi-1024-dalvik-heap.mk)
 
 # call hwui memory config
-$(call inherit-product-if-exists, frameworks/native/build/phone-xxhdpi-1048-hwui-memory.mk)
+# $(call inherit-product-if-exists, frameworks/native/build/phone-xhdpi-1024-hwui-memory.mk)
 
 # Discard inherited values and use our own instead.
 PRODUCT_DEVICE := jewel
