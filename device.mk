@@ -92,7 +92,7 @@ PRODUCT_PACKAGES += \
 # Torch
 PRODUCT_PACKAGES += \
     DeviceSettings \
-    Torch
+    OmniTorch
 
 # Filesystem management tools
 PRODUCT_PACKAGES += \
