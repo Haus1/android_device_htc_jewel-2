@@ -124,6 +124,10 @@ $(call inherit-product, frameworks/native/build/phone-xhdpi-1024-dalvik-heap.mk)
 # call hwui memory config
 # $(call inherit-product-if-exists, frameworks/native/build/phone-xhdpi-1024-hwui-memory.mk)
 
+# Enable ART
+PRODUCT_RUNTIMES := runtime_libdvm_default
+PRODUCT_RUNTIMES += runtime_libart
+
 # Discard inherited values and use our own instead.
 PRODUCT_DEVICE := jewel
 PRODUCT_NAME := jewel
