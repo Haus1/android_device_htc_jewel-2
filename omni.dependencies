@@ -52,5 +52,11 @@
     "repository": "Haus1/android_platform_art",
     "target_path": "art",
     "revision": "android-4.4_tst"
+  },
+  {
+    "remote": "github",
+    "repository": "Haus1/android_packages_apps_DSPManager",
+    "target_path": "packages/apps/DSPManager",
+    "revision": "android-4.4_tst"
   }
 ]
