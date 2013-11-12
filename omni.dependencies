@@ -25,38 +25,8 @@
   },
   {
     "remote": "github",
-    "repository": "Haus1/android_hardware_libhardware",
-    "target_path": "hardware/libhardware",
-    "revision": "android-4.4_tst"
-  },
-  {
-    "remote": "github",
-    "repository": "Haus1/android_hardware_qcom_media",
-    "target_path": "hardware/qcom/media",
-    "revision": "android-4.4_tst"
-  },
-  {
-    "remote": "github",
-    "repository": "Haus1/android_hardware_qcom_display",
-    "target_path": "hardware/qcom/display",
-    "revision": "android-4.4_tst"
-  },
-  {
-    "remote": "github",
-    "repository": "Haus1/android_frameworks_native",
-    "target_path": "frameworks/native",
-    "revision": "android-4.4_tst"
-  },
-  {
-    "remote": "github",
     "repository": "Haus1/android_platform_art",
     "target_path": "art",
-    "revision": "android-4.4_tst"
+    "revision": "android-4.4"
   },
-  {
-    "remote": "github",
-    "repository": "Haus1/android_packages_apps_DSPManager",
-    "target_path": "packages/apps/DSPManager",
-    "revision": "android-4.4_tst"
-  }
 ]
