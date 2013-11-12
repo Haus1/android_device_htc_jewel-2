@@ -1,9 +1,6 @@
 # Least specific includes go first, so that they can get
 # overridden further down
 
-# include the non-open-source counterpart to this file
-#-include vendor/htc/jewel/AndroidBoardVendor.mk
-
 # CDMA APN list
 $(call inherit-product, vendor/omni/config/cdma.mk)
 

@@ -13,19 +13,17 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
-$(call inherit-product-if-exists, vendor/htc/jewel/jewel-vendor.mk)
 
-#Device overlay
-DEVICE_PACKAGE_OVERLAYS += device/htc/jewel/overlay
 
-#Common overlays
-DEVICE_PACKAGE_OVERLAYS += device/htc/s4-common/overlay
 
 TARGET_SCREEN_HEIGHT := 1280
 TARGET_SCREEN_WIDTH := 720
 
 # common S4 configs
 $(call inherit-product, device/htc/s4-common/s4.mk)
+
+#Device overlay
+DEVICE_PACKAGE_OVERLAYS += device/htc/jewel/overlay
 
 # Boot ramdisk setup
 PRODUCT_PACKAGES += \
@@ -84,9 +82,9 @@ PRODUCT_COPY_FILES += \
 
 # NFC Support
 PRODUCT_PACKAGES += \
-    nfc.msm8960 \
+#    nfc.msm8960 \
     libnfc \
-    libnfc_ndef \
+#    libnfc_ndef \
     libnfc_jni \
     Nfc \
     Tag \
@@ -126,6 +124,9 @@ $(call inherit-product, frameworks/native/build/phone-xhdpi-1024-dalvik-heap.mk)
 
 # call hwui memory config
 # $(call inherit-product-if-exists, frameworks/native/build/phone-xhdpi-1024-hwui-memory.mk)
+
+# Call proprietary libs
+$(call inherit-product-if-exists, vendor/htc/jewel/jewel-vendor.mk)
 
 # Enable ART
 PRODUCT_RUNTIMES := runtime_libdvm_default
