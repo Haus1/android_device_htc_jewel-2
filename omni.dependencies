@@ -28,5 +28,5 @@
     "repository": "Haus1/android_platform_art",
     "target_path": "art",
     "revision": "android-4.4"
-  },
+  }
 ]
