@@ -34,6 +34,11 @@ PRODUCT_PACKAGES += \
     remount.qcom \
     init.rc
 
+# Qcom files
+PRODUCT_PACKAGES += \
+    memtrack.msm8960 \
+    alsa.msm8960
+
 # Sound configs
 PRODUCT_COPY_FILES += \
     device/htc/jewel/dsp/soundimage/srs_bypass.cfg:system/etc/soundimage/srs_bypass.cfg \
@@ -82,7 +87,7 @@ PRODUCT_COPY_FILES += \
 
 # NFC Support
 PRODUCT_PACKAGES += \
-#    nfc.msm8960 \
+    nfc.msm8960 \
     libnfc \
 #    libnfc_ndef \
     libnfc_jni \
