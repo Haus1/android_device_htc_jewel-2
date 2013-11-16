@@ -93,8 +93,7 @@ PRODUCT_PACKAGES += \
 #    libnfc_ndef \
     libnfc_jni \
     Nfc \
-    Tag \
-    com.android.nfc_extras
+    Tag 
 
 # Torch
 PRODUCT_PACKAGES += \
