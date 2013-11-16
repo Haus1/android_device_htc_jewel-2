@@ -10,6 +10,8 @@ ro.ril.set.mtusize=1422
 persist.rild.ril.ltedr=0
 persist.rild.ril.ltedrtable=max_retries=infinite,10000
 ro.vendor.extension_library=/system/lib/libqc-opt.so
+ro.telephony.ril_class=RIL
+ro.telephony.ril.v3=forceCdmaLteNetworkType
 
 rild.libargs=-d /dev/smd0
 rild.libpath=/system/lib/libril-qc-qmi-1.so
