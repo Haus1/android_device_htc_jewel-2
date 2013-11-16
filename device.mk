@@ -37,7 +37,8 @@ PRODUCT_PACKAGES += \
 # Qcom files
 PRODUCT_PACKAGES += \
     memtrack.msm8960 \
-    alsa.msm8960
+    alsa.msm8960 \
+    qcmediaplayer
 
 # Sound configs
 PRODUCT_COPY_FILES += \
