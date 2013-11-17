@@ -90,7 +90,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     nfc.msm8960 \
     libnfc \
-#    libnfc_ndef \
+    libnfc_ndef \
     libnfc_jni \
     Nfc \
     Tag 
@@ -101,8 +101,9 @@ PRODUCT_PACKAGES += \
     OmniTorch
 
 # Filesystem management tools
-PRODUCT_PACKAGES += \
-    e2fsck
+#PRODUCT_PACKAGES += \
+#    e2fsck
+# Already included in vendor/omni/config/packages.mk
 
 #PRODUCT_PACKAGES += \
 #    libnetcmdiface
