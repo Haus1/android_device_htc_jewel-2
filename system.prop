@@ -47,3 +47,7 @@ persist.timed.enable=true
 
 # UMS
 persist.sys.usb.config=mass_storage,adb
+
+# GAPPS
+ro.setupwizard.mode=DISABLED
+ro.setupwizard.enable_bypass=true
