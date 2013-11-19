@@ -39,7 +39,8 @@ PRODUCT_PACKAGES += \
     memtrack.msm8960 \
     alsa.msm8960 \
     qcmediaplayer \
-    hci_qcomm_init
+    hci_qcomm_init \
+    libbt-hci
 
 # Things that are Worth a try
 PRODUCT_PACKAGES += \
