@@ -37,7 +37,15 @@ PRODUCT_PACKAGES += \
 # Qcom files
 PRODUCT_PACKAGES += \
     memtrack.msm8960 \
-    alsa.msm8960
+    alsa.msm8960 \
+    qcmediaplayer \
+    hci_qcomm_init
+
+# Things that are Worth a try
+PRODUCT_PACKAGES += \
+    bdAddrLoader \
+    libwfcu \
+    conn_init
 
 # Sound configs
 PRODUCT_COPY_FILES += \
@@ -49,16 +57,14 @@ PRODUCT_COPY_FILES += \
     device/htc/jewel/dsp/soundimage/srs_geq10.cfg:system/etc/soundimage/srs_geq10.cfg \
     device/htc/jewel/dsp/soundimage/srs_global.cfg:system/etc/soundimage/srs_global.cfg
 
+#Media/Audio Config
 PRODUCT_COPY_FILES += \
-    device/htc/jewel/dsp/snd_soc_msm/snd_soc_msm_2x:system/etc/snd_soc_msm/snd_soc_msm_2x
+    device/htc/jewel/dsp/snd_soc_msm/snd_soc_msm_2x:system/etc/snd_soc_msm/snd_soc_msm_2x \
+    device/htc/jewel/configs/media_profiles.xml:system/etc/media_profiles.xml
 
 # Disable Camera2 HAL building
 USE_DEVICE_SPECIFIC_CAMERA := true
     
-# Media config
-PRODUCT_COPY_FILES += \
-    device/htc/jewel/configs/media_profiles.xml:system/etc/media_profiles.xml
-
 # Keylayouts and Keychars
 PRODUCT_COPY_FILES += \
     device/htc/jewel/keylayout/synaptics-rmi-touchscreen.kl:system/usr/keylayout/synaptics-rmi-touchscreen.kl \
@@ -92,26 +98,19 @@ PRODUCT_PACKAGES += \
     libnfc_ndef \
     libnfc_jni \
     Nfc \
-    Tag 
+    Tag
 
-# Torch
-PRODUCT_PACKAGES += \
-    DeviceSettings \
-    OmniTorch
-
-# Filesystem management tools
-#PRODUCT_PACKAGES += \
-#    e2fsck
-# Already included in vendor/omni/config/packages.mk
-
-#PRODUCT_PACKAGES += \
-#    libnetcmdiface
-
-# Permissions
+# NFC Permissions (ToDo: replace nfc_extras or remove permissions)
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.nfc.xml:system/etc/permissions/android.hardware.nfc.xml \
     frameworks/base/nfc-extras/com.android.nfc_extras.xml:system/etc/permissions/com.android.nfc_extras.xml \
     frameworks/native/data/etc/com.nxp.mifare.xml:system/etc/permissions/com.nxp.mifare.xml
+
+# Omni Packages
+PRODUCT_PACKAGES += \
+    OmniTorch \
+    DeviceSettings \
+    Launcher3
 
 # We have enough space to hold precise GC data
 PRODUCT_TAGS += dalvik.gc.type-precise
@@ -126,9 +125,6 @@ PRODUCT_LOCALES := en_US
 
 # call dalvik heap config
 $(call inherit-product, frameworks/native/build/phone-xhdpi-1024-dalvik-heap.mk)
-
-# call hwui memory config
-# $(call inherit-product-if-exists, frameworks/native/build/phone-xhdpi-1024-hwui-memory.mk)
 
 # Call proprietary libs
 $(call inherit-product-if-exists, vendor/htc/jewel/jewel-vendor.mk)
