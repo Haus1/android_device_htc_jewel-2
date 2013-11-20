@@ -35,6 +35,7 @@ TARGET_KERNEL_CONFIG := jet_defconfig
 
 # Bluetooth
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/htc/jewel/bluetooth
+BLUETOOTH_HCI_USE_MCT := true
 
 # RIL
 BOARD_PROVIDES_LIBRIL := true
