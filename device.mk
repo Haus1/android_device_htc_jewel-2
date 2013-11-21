@@ -37,16 +37,16 @@ PRODUCT_PACKAGES += \
 # Qcom files
 PRODUCT_PACKAGES += \
     memtrack.msm8960 \
-    alsa.msm8960 \
-    qcmediaplayer \
-    hci_qcomm_init \
-    libbt-hci
+#    alsa.msm8960 \
+#    qcmediaplayer \
+#    hci_qcomm_init \
+#    libbt-hci
 
 # Things that are Worth a try
-PRODUCT_PACKAGES += \
-    bdAddrLoader \
-    libwfcu \
-    conn_init
+#PRODUCT_PACKAGES += \
+#    bdAddrLoader \
+#    libwfcu \
+#    conn_init
 
 # Sound configs
 PRODUCT_COPY_FILES += \
