@@ -78,7 +78,11 @@ BOARD_VOLD_EMMC_SHARES_DEV_MAJOR := true
 BOARD_VOLD_MAX_PARTITIONS := 39
 
 # Recovery
-TARGET_RECOVERY_FSTAB := device/htc/jewel/rootdir/etc/fstab.qcom
+TARGET_RECOVERY_FSTAB := device/htc/jewel/recovery.fstab
+BOARD_CUSTOM_GRAPHICS := ../../../device/htc/jewel/recovery/graphics.c
+BOARD_HAS_NO_SELECT_BUTTON := true
+BOARD_USE_CUSTOM_RECOVERY_FONT := \"roboto_15x24.h\"
+BOARD_RECOVERY_SWIPE := true
 
 # TWRP
 DEVICE_RESOLUTION := 720x1280
