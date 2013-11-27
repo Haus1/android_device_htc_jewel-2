@@ -2,6 +2,7 @@
 # system.prop for jewel
 #
 
+ro.boot.selinux=permissive
 ro.sf.lcd_density=320
 
 # RIL properties
