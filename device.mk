@@ -37,6 +37,7 @@ PRODUCT_PACKAGES += \
 # Qcom files
 PRODUCT_PACKAGES += \
     memtrack.msm8960 \
+    TeleService
 #    alsa.msm8960 \
 #    qcmediaplayer \
 #    hci_qcomm_init \

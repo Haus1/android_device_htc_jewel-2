@@ -37,6 +37,10 @@ TARGET_KERNEL_CONFIG := jet_defconfig
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/htc/jewel/bluetooth
 BLUETOOTH_HCI_USE_MCT := true
 
+# Audio
+QCOM_AUDIOD_ENABLED := true
+QCOM_ADSP_SSR_ENABLED := true
+
 # RIL
 #BOARD_PROVIDES_LIBRIL := true
 #BOARD_RIL_CLASS := device/htc/jewel/rilL
@@ -98,6 +102,9 @@ TW_EXTERNAL_STORAGE_MOUNT_POINT := "external_sd"
 TW_INCLUDE_DUMLOCK := true
 TW_INCLUDE_JB_CRYPTO := true
 TWHAVE_SELINUX := true
+#TODO: Remove once graphics issues are sorted out
+#TW_NO_SCREEN_TIMEOUT := true
+TW_NO_SCREEN_BLANK := true
 
 -include vendor/htc/jewel/BoardConfigVendor.mk
 
