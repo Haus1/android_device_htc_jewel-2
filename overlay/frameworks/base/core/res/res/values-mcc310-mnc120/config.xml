@@ -50,21 +50,21 @@
          ex: MSGTYPE-TotalSegments-CurrentSegment
              -SourcePortDestPort-SourcePortDestPort-OMADM PDU
          If false, not supported. -->
-    <bool name="config_duplicate_port_omadm_wappush">true</bool>
+    <!-- <bool name="config_duplicate_port_omadm_wappush">true</bool> -->
 
     <!-- If Voice Radio Technology is RIL_RADIO_TECHNOLOGY_LTE:14 this is the value
          that should be used instead. A value of RIL_RADIO_TECHNOLOGY_UNKNOWN:0 means
          there is no replacement value and VoLTE is assumed to be supported
 
          For sprint we will use RIL_RADIO_TECHNOLOGY_1xRTT:6 -->
-    <integer name="config_volte_replacement_rat">6</integer>
+    <!-- <integer name="config_volte_replacement_rat">6</integer> -->
 
     <!-- Sometimes, PDU has garbages. So, need to use valid index -->
-    <integer name="config_valid_wappush_index">4</integer>
+    <!-- <integer name="config_valid_wappush_index">4</integer> -->
 
     <!-- Default network policy warning threshold, in megabytes. -->
     <integer name="config_networkPolicyDefaultWarning">51200</integer>
 
     <!-- MMS user agent prolfile url -->
-    <string name="config_mms_user_agent_profile_url" translatable="false">http://gsm.lge.com/html/gsm/Nexus5-M20.xml</string>
+    <!-- <string name="config_mms_user_agent_profile_url" translatable="false">http://gsm.lge.com/html/gsm/Nexus5-M20.xml</string> -->
 </resources>

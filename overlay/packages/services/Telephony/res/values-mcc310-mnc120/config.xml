@@ -22,7 +22,7 @@
          the com.android.internal.telephony.Phone interface (false). -->
     <bool name="send_mic_mute_to_AudioManager">true</bool>
     <!-- Flag indicating if the tty is enabled -->
-    <!-- <bool name="tty_enabled">true</bool> -->
+    <bool name="tty_enabled">true</bool>
     <!-- Configure certain GsmUmtsOptions to be available or not. The
          default values are in Phone/res/values/config.xml and maybe overridden
          in operator specific resource directories or device specific overlays. -->
@@ -32,5 +32,5 @@
     <!-- Show cdma auto network mode in (glabal) roaming -->
     <bool name="config_show_cdma" translatable="false">true</bool>
     <!-- CDMA activation goes through HFA [DO NOT TRANSLATE] -->
-    <bool name="config_use_hfa_for_provisioning" translatable="false">true</bool>
+    <!-- <bool name="config_use_hfa_for_provisioning" translatable="false">true</bool> -->
 </resources>
